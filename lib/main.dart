@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:techzilla_flutter_app/example/simple_screen.dart';
+import 'package:techzilla_flutter_app/example/sign_in_form.dart';
+import 'package:techzilla_flutter_app/example/sign_up_form.dart';
+import 'package:techzilla_flutter_app/example/quiz_screen.dart';
+import 'package:techzilla_flutter_app/example/telegram.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +16,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Techzilla Store',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -23,8 +29,13 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        fontFamily: 'googleSans',
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Techzilla Store'),
+      // home: const Screen1(),
+      // home: const SignInScreen(),
+      // home: const QuizScreen(),
+      home: const Telegram(),
     );
   }
 }
@@ -74,6 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -109,6 +121,9 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
+      ),
+      drawer: Drawer(
+        child: Column(),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
