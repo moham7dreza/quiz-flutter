@@ -1,7 +1,3 @@
-# techzilla_flutter_app
-
-flutter app for my ecommerce laravel website
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
